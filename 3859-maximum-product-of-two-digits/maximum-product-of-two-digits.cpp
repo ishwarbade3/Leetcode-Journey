@@ -1,21 +1,21 @@
 class Solution {
 public:
     int maxProduct(int n) {
-        int maxnum = INT_MIN;
-        int temp = n;
-        while (temp != 0) {
-            int digit = temp % 10;
-            temp /= 10;
-            int num = temp;
-            while (num != 0) {
-                int innerdigit = num % 10;
-                num /= 10;
-                maxnum = max(maxnum, digit * innerdigit);
-                cout << maxnum << endl;
-            }
-        }
+        // int maxnum = INT_MIN;
+        // int temp = n;
+        // while (temp != 0) {
+        //     int digit = temp % 10;
+        //     temp /= 10;
+        //     int num = temp;
+        //     while (num != 0) {
+        //         int innerdigit = num % 10;
+        //         num /= 10;
+        //         maxnum = max(maxnum, digit * innerdigit);
+        //         cout << maxnum << endl;
+        //     }
+        // }
 
-        return maxnum;
+        // return maxnum;
         //      vector<int> digits;
 
         // while (n != 0) {
@@ -32,5 +32,21 @@ public:
         // }
 
         // return maxnum;
+          int first = -1, second = -1;
+
+    while (n != 0) {
+        int digit = n % 10;
+
+        if (digit >= first) {
+            second = first;
+            first = digit;
+        } else if (digit > second) {
+            second = digit;
+        }
+
+        n /= 10;
+    }
+
+    return first * second;
     }
 };
