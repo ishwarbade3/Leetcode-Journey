@@ -1,0 +1,17 @@
+public class Solution {
+    public int SmallestNumber(int n, int t) {
+         while (true) {
+            int num = n;
+            int product = 1;
+            while (num != 0) {
+                product *= num % 10;
+                num /= 10;
+            }
+            if (product % t == 0)
+                break;
+            else
+                ++n;
+        }
+        return n;
+    }
+}
