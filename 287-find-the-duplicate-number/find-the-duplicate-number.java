@@ -3,11 +3,9 @@ class Solution {
 
         Set<Integer> ans = new HashSet<Integer>();
 
-        for (int n : nums) {
-
-            if (!ans.add(n))
-                return n;
-        }
+        for (int n : nums) 
+            if (!ans.add(n)) return n;
+    
         return -1;
 
     }
