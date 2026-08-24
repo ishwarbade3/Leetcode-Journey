@@ -20,9 +20,7 @@ class Solution {
     }
     public List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();
-        StringBuilder ans = new StringBuilder();
-
-        optimalSol(result,ans,0,0,n);
+        optimalSol(result,new StringBuilder(),0,0,n);
         return result;
         
     }
