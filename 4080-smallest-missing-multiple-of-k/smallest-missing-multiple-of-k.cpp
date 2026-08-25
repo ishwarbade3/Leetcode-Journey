@@ -1,7 +1,7 @@
 class Solution {
 public:
     int missingMultiple(vector<int>& nums, int k) {
-         set<int>ans;
+         unordered_set<int>ans;
 
         for(int n : nums){
             ans.insert(n);
