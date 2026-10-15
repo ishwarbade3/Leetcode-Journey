@@ -3,8 +3,8 @@ public:
     vector<vector<int>> shiftGrid(vector<vector<int>>& grid, int num) {
         int m = grid.size();
         int n = grid[0].size();
-        int mul = m * n;
-
+        int mul ;
+        mul= m * n;
         num = num % mul;
         for (int i = 0; i < num; i++) {
 
